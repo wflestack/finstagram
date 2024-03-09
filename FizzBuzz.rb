@@ -1,13 +1,12 @@
-(1..15) .each do |n|
+(1..15).each do |n|
 
     if n % 3 == 0 && n % 5 == 0 
-            "Fizzbuzz"
+        puts "Fizzbuzz"
     elsif n % 3 == 0 
-            "Fizz"
+        puts "Fizz"
     elsif n % 5 == 0 
-            "Buzz"
+        puts "Buzz"
     else n
-        
+        puts n
     end 
 end
-print 

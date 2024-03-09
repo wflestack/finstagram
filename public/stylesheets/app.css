@@ -12,12 +12,12 @@ main {
     padding: 25px;
   }
 
-.finstigram-post {
+.finstagram-post {
     margin-bottom: 48px;
 }
 
-.finstigram-post .user-info img {
-    border-radius: 100%;
+.finstagram-post .user-info img {
+    border-radius: 50%;
   }
   
 body {

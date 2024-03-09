@@ -7,7 +7,7 @@
 end
 
 get '/' do
-    finstagram_post_david = {
+    @finstagram_post_david = {
         username: "David",
         avatar_url: "https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/pass/Monkey-Selfie.jpg",
         photo_url: "https://cdn.britannica.com/06/150806-050-6AE99C98/Proboscis-monkey.jpg",
@@ -19,7 +19,7 @@ get '/' do
             text: "Felt cute might delete later"
         }]
 }
-finstagram_post_jerry = {
+@finstagram_post_jerry = {
         username: "Jerry",
         avatar_url: "https://i.pinimg.com/736x/1b/01/8a/1b018a94edc70e4652137b79706276a2.jpg",
         photo_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/12/10/1355137476555/Ikea-monkey-in-Toronto-st-008.jpg?width=465&dpr=1&s=none",
@@ -31,7 +31,7 @@ finstagram_post_jerry = {
             text: "Got all dressed up"
         }]
 }
-finstagram_post_emily = {
+@finstagram_post_emily = {
         username: "Emily",
         avatar_url: "https://storage.googleapis.com/adforum-media/34570212/ad_34570212_9b8f80babf2c99c9_web.jpg",
         photo_url: "https://i.pinimg.com/originals/71/c5/df/71c5dfc9e534153b0c2c4c3dd124a65c.jpg",
@@ -43,5 +43,21 @@ finstagram_post_emily = {
             text: "Out for a drive"
         }]
 }
-[finstagram_post_david, finstagram_post_jerry, finstagram_post_emily].to_s
+
+@finstagram_post_katie = {
+        username: "Katie",
+        avatar_url: "https://www.mandourlaw.com/wp-content/uploads/2015/09/monkey.jpg",
+        photo_url: "https://cdn.sci.news/images/enlarge/image_1319e-Chimp-Cooper.jpg",
+        humanized_time_ago: humanized_time_ago(120),
+        like_count: 346,
+        comment_count: 21,
+        comments: [{
+            username: "Katie",
+            text: "Enjoying the water"
+        }]
+}
+    
+@finstagram_posts = [@finstagram_post_david, @finstagram_post_jerry, @finstagram_post_emily, @finstagram_post_katie]
+
+erb(:index)
 end
